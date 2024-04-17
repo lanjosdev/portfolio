@@ -4,26 +4,84 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucas Dev</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./src/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./src/css/styles.css">
+    <link rel="stylesheet" href="./src/css/components.css">
+    <title>Lucas Dev</title>
 </head>
+
 <body>
 
-    <main>
-        <header>
-            <nav></nav>
-        </header>
+    <header>
+        <nav class="nav grid">
+            <a class="nav-logo" href="#">
+                <img src="./src/assets/logo.svg" alt="Logo do site">
+                Lucas Dev
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="">Sobre mim</a></li>
+                <li><a href="">Skills</a></li>
+                <li><a href="">Hobbies</a></li>
+                <li><a href="">Formação</a></li>
+                <li><a href="">Projetos</a></li>
+                <li><a class="contato-link" href="">lucas.anjospro@gmail.com</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <section id="home">
-            <h1>Portfólio em Construção...</h1>
+    <main>
+
+        <section id="hero">
+            <div class="grid">
+
+            <div class="hero-text">
+                <h1 class="titulo-hero">
+                    Olá, meu nome é Fulana de Tal e construo páginas web
+                </h1>
+                <h2 class="subtitulo-hero">
+                    Eu sou formada em lorem ipsum sit amet consectetur e atualmente estou participando no projeto Oracle ONE na Alura.
+                </h2>
+                <ul class="redes-hero">
+                    <li>
+                        <a class="link-rede" href="http://">
+                            Github
+                            <img src="./src/assets/seta-link.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="link-rede" href="http://">
+                            Linkedin
+                            <img src="./src/assets/seta-link.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="link-rede" href="http://">
+                            Currículo
+                            <img src="./src/assets/seta-link.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="hero-ilustra">
+                <img src="./src/assets/foto-hero.jfif" alt="Foto do desenvolvedor deste portfólio">
+            </div>
+
+            </div>
         </section>
 
-        
     </main>
+
+    <footer>
+
+    </footer>     
     
+
+    <!-- <script src=""></script> -->
 </body>
 </html>
