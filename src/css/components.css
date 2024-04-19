@@ -11,7 +11,7 @@
 
 
 /* typograph */
-h1, h2, a {
+h1, h2, a, p {
     line-height: 120%;
 }
 h1, h2 {
@@ -20,6 +20,9 @@ h1, h2 {
 a {
     font-size: 1.6rem;
     font-weight: 500;
+}
+p {
+    letter-spacing: .5px;
 }
 
 .contato-link {
@@ -86,7 +89,6 @@ header {
 main {
     
     section#hero {
-        background-color: rgba(255, 0, 0, 0.26);
         padding: 3.2rem 1.5rem;
         
         .grid {
@@ -179,6 +181,44 @@ main {
                 gap: 16px;
             }
 
+        }
+    }
+
+    section#about {
+        background-color: rgba(255, 0, 0, 0.26);
+        padding: 6.4rem 1.5rem;
+
+        h2 {
+            font-size: 3.2rem;
+            /* font-weight: 700; */
+            margin-bottom: 1.6rem;
+        }
+
+        .texto-sobre {
+            max-width: 75.1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+
+        /* Responsivo */
+        /* tablet */
+        @media (max-width: 768px) {
+            padding: 3.2rem 1.5rem;
+
+            h2 {
+                font-size: 22px;
+            }
+
+            .texto-sobre {
+                font-size: 14px;
+            }
+        }
+
+        /* celular */
+        @media (max-width: 420px) {
+            padding: 16px 1.5rem;
         }
     }
 }
