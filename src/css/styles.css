@@ -1,16 +1,15 @@
 :root {
-    --color-primary: #ced0d4;
-    --color-text: #464646;
-    --color-bg: #F5F5F5;
-    --color-hover: #272727;
+    --color-primary: #47B36A;
+    --color-secundary: #335BC9;
+    --color-text: #F5F5F5;
+    --color-bg-main: #171717;
+    --color-bg-secundary: #2b2a2a;
 
     --font-main: "Raleway";
     --font-headers: 'Krona One';
 
-    --px-mobile: 380px;
-
-    color-scheme: light dark;
-    font-synthesis: none;
+    /* color-scheme: light dark;
+    font-synthesis: none; */
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -62,9 +61,10 @@ html {
 }
   
 body {
-    min-height: 100dvh;
+    /* min-height: 100vh;
+    min-height: 100dvh; */
 
-    background-color: var(--color-bg);
+    background-color: var(--color-bg-main);
 
     font-size: 1.6rem; /* Pra garantir q o padrao seja 16px no navegador*/
     -webkit-font-smoothing: antialiased;
@@ -79,8 +79,3 @@ body, input, textarea, button, select, a {
     cursor: not-allowed;
 }
 /* GLOBAL */
-
-
-/* LAYOUT APP */
-
-/* LAYOUT APP */
