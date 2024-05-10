@@ -93,6 +93,10 @@ main {
     
     section#hero {
         padding: 3.2rem 1.5rem;
+        position: relative;
+        background-image: url(../assets/bg-hero.jpg);
+        background-repeat: no-repeat;
+        background-size: 25px 70px;
         
         .grid {
             display: flex;
@@ -101,13 +105,13 @@ main {
         }
 
         .hero-text {
-            max-width: 75.1rem;
+            max-width: 65rem;
             display: flex;
             flex-direction: column;
             gap: 2.4rem;
 
             .text-degrade {
-                background: -webkit-linear-gradient(45deg, #00ff95, #3385c9 95%);
+                background: -webkit-linear-gradient(45deg, #00ff95, #1e87dd 100%);
                 background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
@@ -166,6 +170,20 @@ main {
                 border-radius: 50%;
             }
         } */
+        .about-more {
+            position: absolute;
+            bottom: -18px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            ion-icon {
+                font-size: 3.5rem;
+            }
+        }
 
         /* Responsivo */
         /* tablet */
