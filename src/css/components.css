@@ -37,12 +37,16 @@ p {
 
 header {
     position: fixed;
+    top: 0;
+    left: 0;
     z-index: 10;
     width: 100%;
     padding: 0 1.5rem;
-    height: 8.8rem;
+    height: 8rem;
     display: flex;
-    background-color: var(--color-bg-main);
+    background-color: #171717d2;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
 
     .nav {
         display: flex;
@@ -96,12 +100,16 @@ header {
 main {
     
     section#hero {
-        padding: calc(3.2rem + 8.8rem) 1.5rem 3.2rem;
+        margin-top: 56px;
+        padding: 5rem 1.5rem;
+        /* height: calc(100dvh - 10rem); */
         position: relative;
-        /* background-image: url(../assets/bg-hero.png);
+        background: linear-gradient(to left, #02f6990e 10%,#171717 50%), url(../assets/bg-hero.png);
         background-repeat: no-repeat;
-        background-size: contain;
-        background-position: right; */
+        background-size: contain 100%;
+        /* background-position: 150% 20%; */
+        background-position: right 20%;
+        /* background-position: 120% center; */
         
         
         .grid {
@@ -117,10 +125,18 @@ main {
             gap: 2.4rem;
 
             .text-degrade {
-                background: -webkit-linear-gradient(45deg, #00ff95, #1e87dd 100%);
+                color: #00ff95;
+                background: -webkit-linear-gradient(65deg, #00ff95 10%, #1e87dd 120%);
                 background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
+                
+                /* color: #1e87dd; 
+                background-image: 
+                -webkit-linear-gradient(45deg, #1e87dd 0%, #00ff95 50%); 
+                background-clip: text; -webkit-background-clip: text; 
+                text-fill-color: transparent; 
+                -webkit-text-fill-color: transparent; */
             }
             
             p {
@@ -155,12 +171,12 @@ main {
         }
 
         .hero-ilustra {
-            position: absolute;
+            /* position: absolute;
             height: 100%;
             right: -30%;
             z-index: -5;
             
-            opacity: .5;
+            opacity: .5; */
         }
         /* .hero-ilustra {
             width: 100%;
