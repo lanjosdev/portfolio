@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
     <link rel="stylesheet" href="./src/css/styles.css">
     <link rel="stylesheet" href="./src/css/components.css">
     <title>Lucas Dev</title>
@@ -18,23 +20,25 @@
 
     <header>
         <nav class="nav grid">
-            <a class="nav-logo" href="#">
+            <a class="nav-logo" href="#" onclick="onClickToggle()">
                 <ion-icon name="code-slash"></ion-icon>
                 Lucas Dev
             </a>
             
             <ul class="nav-links">
-                <li><a href="#about">Sobre mim</a></li>
-                <li><a href="#skills">Skills</a></li>
+                <li><a href="#about" onclick="onClickToggle()">Sobre mim</a></li>
+                <li><a href="#skills" onclick="onClickToggle()">Skills</a></li>
                 <!-- <li><a href="#">Hobbies</a></li> -->
                 <!-- <li><a href="#">Formação</a></li> -->
-                <li><a href="#projects">Projetos</a></li>
-                <li><a class="contato-link" href="#">lucas.anjospro@gmail.com</a></li>
+                <li><a href="#projects" onclick="onClickToggle()">Projetos</a></li>
+                <li><a class="contato-link" href="#" onclick="onClickToggle()">lucas.anjospro@gmail.com</a></li>
             </ul>
             
             <button class="btn-mobile">
                 <label for="toggle">
-                    <img src="./src/assets/icon-hamburger.svg" alt="Icone de navegação">
+                    <i class="bi bi-list"></i>
+                    <i class="bi bi-x"></i>
+                    <!-- <img src="./src/assets/icon-hamburger.svg" alt="Icone de navegação"> -->
                 </label>
             </button>
             <input type="checkbox" id="toggle" />
@@ -223,5 +227,13 @@
     <!-- <script src=""></script> -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        const elementToggle = document.querySelector('#toggle');
+
+        function onClickToggle() {
+            elementToggle.checked = false;
+        }
+    </script>
 </body>
 </html>
