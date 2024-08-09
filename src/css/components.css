@@ -246,6 +246,7 @@ main {
                     margin: 0 0 4rem 0;
                     
                     .link-rede {
+                        position: relative;
                         background: linear-gradient(#000000af, #000) padding-box, linear-gradient(to right, #00ff95, #1e87dd) border-box;
                         border: 2px solid transparent;
                         border-radius: 5px;
@@ -257,6 +258,29 @@ main {
                         gap: .5rem;
 
                         font-weight: 600;
+
+                        transition: all .4s ease-in-out;
+                        &::before {
+                            content: "";
+                            z-index: -1;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            left: 0;
+                            background: linear-gradient(0deg, #00ff95 0%, #1e87dd 100% );
+                            transform: translate3d(0px, 0px, 0) scale(0.0);
+                            filter: blur(20px);
+                            opacity: 0.7;
+                            transition: all .4s ease;
+                        }
+        
+                        &:hover {
+                            filter: brightness(1.1);
+                            &::before {
+                                transform: translate3d(0px, 0px, 0) scale(1);
+                            }
+                        }
 
                         &:last-child {
                             grid-column:  1 / -1;
@@ -310,7 +334,7 @@ main {
             z-index: 5;
             bottom: -18px;
             left: 50%;
-            transform: translateX(-50%);
+            /* transform: translateX(-50%); */
 
             display: flex;
             flex-direction: column;
@@ -335,7 +359,7 @@ main {
                 gap: 2.5rem;
 
                 .titulo-hero {
-                    font-size: 22px;
+                    font-size: 25px;
                 }
                 p, .subtitulo-redes > .subtitulo-hero {
                     font-size: 1.6rem;
@@ -376,7 +400,7 @@ main {
         }
     }
 
-    section#about {
+    section.about {
         background-color: var(--color-bg-secundary);
         filter: drop-shadow(0 0 7px var(--color-bg-secundary));
         padding: 6.4rem 1.5rem;
@@ -387,12 +411,25 @@ main {
             margin-bottom: 1.6rem;
         }
 
-        .texto-sobre {
-            max-width: 75.1rem;
+        .content-sobre {
             display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2.5rem;
+
+            .texto-sobre {
+                max-width: 75.1rem;
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .imagem-sobre {
+                max-width: 30rem;
+                border-radius: 40%;
+            }
         }
+        
 
 
         /* Responsivo */
@@ -402,17 +439,30 @@ main {
 
             h2 {
                 font-size: 22px;
+                margin-bottom: 2rem;
             }
 
-            .texto-sobre {
+            /* .texto-sobre {
                 font-size: 14px;
-            }
+            } */
         }
+        @media (max-width: 700px) {
+            .content-sobre {
+                flex-direction: column-reverse;
+                gap: 1.5rem;
+
+                .imagem-sobre {
+                    max-width: 25rem;
+                }
+            }
+            
+        }
+
 
         /* celular */
-        @media (max-width: 420px) {
+        /* @media (max-width: 420px) {
             padding: 16px 1.5rem;
-        }
+        } */
     }
 
     section#skills {
@@ -561,4 +611,19 @@ main {
         }
     }
 
+}
+
+@keyframes moveDown {
+    0% {
+        transform: translateX(-50%) translateY(-0.5rem);
+    }
+    50% {
+        transform: translateX(-50%) translateY(0.1rem);
+    }
+    100% {
+        transform: translateX(-50%) translateY(-0.5rem);
+    }
+}
+.move-down {
+    animation: moveDown 3s linear infinite;
 }
