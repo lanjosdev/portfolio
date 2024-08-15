@@ -19,6 +19,15 @@ h1, h2 {
 }
 h2 {
     font-size: 3.2rem;
+
+    span {
+        display: inline-block;
+        width: .6rem;
+        height: .6rem;
+
+        background: linear-gradient(90deg, #00ff95 20%, #1e87dd 120%);
+        margin-left: .4rem;
+    }
 }
 a {
     font-size: 1.6rem;
@@ -542,8 +551,11 @@ main {
             }
         }
 
-        p {
-            margin-top: 2rem;
+        .texto-skills {
+            margin-top: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
         }
 
         /* Responsivo */
@@ -561,12 +573,17 @@ main {
             ul.cards-skills {    
                 .card-item {
                     max-width: 150px;
+                    justify-content: center;
                 }
+            }
+
+            .texto-skills {
+                text-align: center;
             }
         }
     }
 
-    section#projects {
+    section.projects {
         /* background-color: var(--color-bg-secundary); */
         padding: 3.2rem 1.5rem 4.5rem;
 
@@ -636,9 +653,9 @@ main {
         /* tablet */
         @media (max-width: 768px) {
 
-            /* h2 {
+            h2 {
                 font-size: 22px;
-            } */
+            }
 
             .cards-projetos {
                 grid-template-columns: 1fr;
