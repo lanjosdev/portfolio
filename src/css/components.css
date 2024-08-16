@@ -348,14 +348,14 @@ main {
             }
         }
 
-        .hero-ilustra {
-            /* position: absolute;
+        /* .hero-ilustra {
+            position: absolute;
             height: 100%;
             right: -30%;
             z-index: -5;
             
-            opacity: .5; */
-        }
+            opacity: .5;
+        } */
         /* .hero-ilustra {
             width: 100%;
             min-width: 15rem;
