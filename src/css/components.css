@@ -536,6 +536,7 @@ main {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                justify-content: space-between;
                 gap: 1.5rem;
 
                 transition: all .3s ease;
@@ -628,7 +629,7 @@ main {
 
                         border-radius: 5px;
 
-                        object-fit: fill;
+                        object-fit: cover;
                     }
                     .img-gif {
                         position: absolute;
